@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet";
-import BucketDetailPage from "../pages/bucket-detail";
 
 
-//custom Components
-import BucketPage from "../pages/buckets";
+
+//Router
+import AppRouter from "./router";
 
 function App() {
   return (
@@ -18,8 +18,7 @@ function App() {
           rel="stylesheet"
         />
       </Helmet>
-      <BucketPage/>
-      <BucketDetailPage/>
+      <AppRouter/>
     </div>
   );
 }
