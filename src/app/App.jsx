@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+import BucketDetailPage from "../pages/bucket-detail";
 
 
 //custom Components
@@ -18,6 +19,7 @@ function App() {
         />
       </Helmet>
       <BucketPage/>
+      <BucketDetailPage/>
     </div>
   );
 }
