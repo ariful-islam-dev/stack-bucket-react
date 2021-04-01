@@ -6,31 +6,13 @@ import plusIcon from '../../assets/icons/plus-icon.png';
 import editIcon from '../../assets/icons/edit-icon.png'
 import deleteIcon from '../../assets/icons/delete-icon.png'
 import printerIcon from '../../assets/icons/printer-icon.png'
+import Nav from '../../components/nav';
 
 function BucketPage (){
     return (
     <div>
-        <nav className="nav __shadow--lg">
-			<div className="container nav__container">
-				<div className="nav__brand">
-					<img
-						className="nav__brand-logo"
-						src={brnagLogo}
-						alt="Brand Logo"
-					/>
-					<h1 className="nav__brand-name">Stack Learner</h1>
-				</div>
-				<div className="nav__menu nav__menu--right">
-					<div className="nav__menu-items">
-						<img
-							className="nav__menu-icon"
-							src={moreMenu}
-							alt="More Menu"
-						/>
-					</div>
-				</div>
-			</div>
-		</nav>
+        {/* Navigation Bar */}
+		<Nav/>
         {/* Main content Body */}
         <main className="container __margin--ylg">
             {/* Add New Bucket Section */}
