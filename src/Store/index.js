@@ -1,12 +1,10 @@
-import { action, createStore } from "easy-peasy";
+import {  createStore } from "easy-peasy";
+import BucketModel from './bucketModel';
+import ItemModel from './bucketModel';
 
 const store = createStore({
-    todos: {
-      items: ['Create store', 'Wrap application', 'Use store'],
-      add: action((state, payload) => {
-        state.items.push(payload)
-      })
-    },
+    buckets: BucketModel,
+    shppingItems: ItemModel
     
   });
 
