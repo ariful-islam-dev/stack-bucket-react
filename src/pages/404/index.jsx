@@ -1,6 +1,11 @@
-import brandLogo from'../../assets/brand-logo/brand-logo.svg'
-import moreMenu from'../../assets/icons/more-menu.png'
+import { useStoreState, useStoreActions, action } from 'easy-peasy';
+
+import brandLogo from '../../assets/brand-logo/brand-logo.svg'
+import moreMenu from '../../assets/icons/more-menu.png'
 function NotFound() {
+
+   const todos = useStoreState(state => state.todos.items);
+   const todoActions = useStoreActions(actions=>actions.todos);
     return (
         <div>
             {/* Navigation Bar */}
@@ -29,6 +34,17 @@ function NotFound() {
             <main className="container __margin--ylg">
                 <h1>404</h1>
                 <p>Page Not Found</p>
+                <div style={{marginTop:'2rem'}}>
+                <input type="text" onKeyPress={e=>{
+                    if(e.key === 'Enter' && e.target.value){
+                        todoActions.add(e.target.value);
+                        e.target.value=""
+                    }
+                }}/>
+                <ul>
+                    {todos.map(todo=><li key={todo}>{todo}</li>)}
+                </ul>
+                </div>
             </main>
         </div>
     )
