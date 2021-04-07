@@ -1,10 +1,12 @@
 import {  createStore } from "easy-peasy";
 import BucketModel from './bucketModel';
 import ItemModel from './bucketModel';
+import SuggestionModel from "./suggestionModel";
 
 const store = createStore({
     buckets: BucketModel,
-    shppingItems: ItemModel
+    shppingItems: ItemModel,
+    suggestions: SuggestionModel,
     
   });
 

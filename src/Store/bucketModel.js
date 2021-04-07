@@ -37,4 +37,3 @@ const BucketModel = {
 
 export default BucketModel;
 
-const b = { id: '123', name: 'test' };
